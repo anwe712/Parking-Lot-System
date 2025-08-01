@@ -6,3 +6,5 @@ Car::Car(std::string regNum)
 std::string Car::getTypeAsString() const {
     return "Car";
 }
+
+
