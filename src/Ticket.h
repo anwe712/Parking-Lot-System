@@ -1,12 +1,30 @@
-#ifndef TRUCK_H
-#define TRUCK_H
+#ifndef TICKET_H
+#define TICKET_H
 
-#include "Vehicle.h"
+#include <string>
+#include <ctime>          // For time_t
+#include "Vehicle.h"      // Because ticket is associated with a vehicle
 
-class Truck : public Vehicle {
+class Ticket {
+private:
+    std::string ticketId;
+    Vehicle* vehicle;         // pointer to avoid slicing
+    time_t entryTime;
+    time_t exitTime;
+    std::string slotId;       // e.g., "B2-05"
+
 public:
-    Truck(std::string regNum);
-    std::string getTypeAsString() const override;
+    Ticket(std::string ticketId, Vehicle* vehicle, const std::string& slotId);
+
+    // Setters & Getters
+    std::string getTicketId() const;
+    Vehicle* getVehicle() const;
+    std::string getSlotId() const;
+    time_t getEntryTime() const;
+    time_t getExitTime() const;
+
+    void setExitTime(time_t exit);
+    void printTicket() const;     // Optional: helpful for logging or debugging
 };
 
-#endif
+#endif // TICKET_H
