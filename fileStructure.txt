@@ -1,0 +1,29 @@
+parking-lot/
+│
+├── README.md
+├── src/
+│   ├── main.cpp              # Entry point
+│   ├── Vehicle.h/.cpp        # Base + derived vehicle types
+│   ├── Slot.h/.cpp           # Parking slot logic
+│   ├── Ticket.h/.cpp         # Ticket creation
+│   ├── ParkingLot.h/.cpp     # Main manager
+│   └── utils.h               # Optional helpers
+└── Makefile / build.sh
+
+
+--------------------------
+our folder structure 
+--------------------------
+parking-lot/
+├── README.md
+├── Makefile
+└── src/
+    ├── Vehicle.h/.cpp
+    ├── Car.h/.cpp
+    ├── Bike.h/.cpp
+    ├── Truck.h/.cpp
+    ├── Slot.h/.cpp
+    ├── Ticket.h/.cpp
+    ├── ParkingLot.h/.cpp
+    ├── main.cpp
+    └── utils.h
